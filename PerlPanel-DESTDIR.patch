@@ -1,12 +1,22 @@
-diff -aurN PerlPanel-0.0.5.orig/Makefile PerlPanel-0.0.5/Makefile
---- PerlPanel-0.0.5.orig/Makefile	2003-07-14 13:31:39.000000000 +0200
-+++ PerlPanel-0.0.5/Makefile	2003-07-25 18:32:06.000000000 +0200
-@@ -16,15 +16,15 @@
+diff -aurN PerlPanel-0.1.0.orig/Makefile PerlPanel-0.1.0/Makefile
+--- PerlPanel-0.1.0.orig/Makefile	2003-10-12 18:22:17.000000000 +0200
++++ PerlPanel-0.1.0/Makefile	2003-10-23 21:24:28.026089968 +0200
+@@ -17,7 +17,7 @@
+ #
+ # $Id$
+ 
+-PREFIX=/usr/local
++PREFIX=/usr
+ LIBDIR=$(PREFIX)/lib/perlpanel
+ BINDIR=$(PREFIX)/bin
+ MANDIR=$(PREFIX)/share/man/man1
+@@ -32,17 +32,17 @@
  	pod2man doc/perlpanel-applet-howto.pod > build/perlpanel-applet-howto.1
  
  install:
 -	mkdir -p $(LIBDIR) $(BINDIR) $(MANDIR) $(IMGDIR)
 -	install -m 0755 build/perlpanel $(BINDIR)/
+-	install -m 0755 src/perlpaneld $(BINDIR)/
 -	install -m 0755 src/perlpanel-item-edit $(BINDIR)/
 -	cp -Rvp lib/* $(LIBDIR)/
 -	install -m 0755 build/perlpanel.1 $(MANDIR)/
@@ -14,8 +24,10 @@ diff -aurN PerlPanel-0.0.5.orig/Makefile PerlPanel-0.0.5/Makefile
 -	install -m 0644 share/perlpanel.png $(IMGDIR)/
 -	install -m 0644 share/perlpanel-menu-icon.png $(IMGDIR)/
 -	install -m 0644 share/perlpanel-lock-screen.png $(IMGDIR)/
+-	install -m 0644 share/perlpanel-show-desktop.png $(IMGDIR)/
 +	mkdir -p $(DESTDIR)$(LIBDIR) $(DESTDIR)$(BINDIR) $(DESTDIR)$(MANDIR) $(DESTDIR)$(IMGDIR)
 +	install -m 0755 build/perlpanel $(DESTDIR)$(BINDIR)/
++	install -m 0755 src/perlpaneld $(DESTDIR)$(BINDIR)/
 +	install -m 0755 src/perlpanel-item-edit $(DESTDIR)$(BINDIR)/
 +	cp -Rvp lib/* $(DESTDIR)$(LIBDIR)/
 +	install -m 0755 build/perlpanel.1 $(DESTDIR)$(MANDIR)/
@@ -23,6 +35,7 @@ diff -aurN PerlPanel-0.0.5.orig/Makefile PerlPanel-0.0.5/Makefile
 +	install -m 0644 share/perlpanel.png $(DESTDIR)$(IMGDIR)/
 +	install -m 0644 share/perlpanel-menu-icon.png $(DESTDIR)$(IMGDIR)/
 +	install -m 0644 share/perlpanel-lock-screen.png $(DESTDIR)$(IMGDIR)/
++	install -m 0644 share/perlpanel-show-desktop.png $(DESTDIR)$(IMGDIR)/
  
  clean:
  	rm -rf build
