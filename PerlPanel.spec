@@ -2,16 +2,17 @@
 Summary:	Panel program written in Perl
 Summary(pl):	Panel napisany w Perlu
 Name:		PerlPanel
-Version:	0.4.2
+Version:	0.6.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://jodrell.net/files/%{name}-%{version}.tar.gz
-# Source0-md5:	7a1d018751a48abc5fabdc3b7f5a2960
+# Source0-md5:	62a321db167ce6e6c164ad66f1096879
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://jodrell.net/projects/perlpanel/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	hicolor-icon-theme
 Requires:	perl-Glib >= 1.031
 Requires:	perl-Gtk2 >= 1.031
 Requires:	perl-XML-Parser
@@ -52,6 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/perlpanel
 %{_datadir}/perlpanel
-%{_pixmapsdir}/*
+%{_iconsdir}/hicolor/48x48/apps/*
 %{_mandir}/man1/*
 %{_mandir}/man3/*
