@@ -1,4 +1,4 @@
-%include        /usr/lib/rpm/macros.perl
+%include	/usr/lib/rpm/macros.perl
 Summary:	Panel program written in Perl
 Summary(pl):	Panel napisany w Perlu
 Name:		PerlPanel
@@ -11,7 +11,7 @@ Source0:	http://jodrell.net/files/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://jodrell.net/projects/perlpanel/
 BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:  rpm-perlprov >= 4.1-13
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-XML-Parser
 Requires:	perl-XML-Simple
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -26,7 +26,7 @@ PerlPanel jest prób± stworzenia ³atwego w u¿yciu, lekkiego panela
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 %build
 %{__make}
