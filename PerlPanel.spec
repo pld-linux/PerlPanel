@@ -12,6 +12,8 @@ Patch0:		%{name}-DESTDIR.patch
 URL:		http://jodrell.net/projects/perlpanel/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-Glib >= 1.031
+Requires:	perl-GTk2 >= 1.031
 Requires:	perl-XML-Parser
 Requires:	perl-XML-Simple
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
