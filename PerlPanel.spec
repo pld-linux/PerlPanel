@@ -2,12 +2,13 @@
 Summary:	Panel program written in Perl
 Summary(pl):	Panel napisany w Perlu
 Name:		PerlPanel
-Version:	0.4.0
+Version:	0.4.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://jodrell.net/files/%{name}-%{version}.tar.gz
-# Source0-md5:	706b3d2af9463d407321752689923484
+# Source0-md5:	f3d48f7f57561fe8f16c486ced358ca7
+Patch0:		%{name}-DESTDIR.patch
 URL:		http://jodrell.net/projects/perlpanel/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -27,10 +28,11 @@ PerlPanel jest prób± stworzenia ³atwego w u¿yciu, lekkiego panela
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
-	PREFIX=%{_prefix} \
+	PREFIX=%{_prefix}
 	
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -38,11 +40,13 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	PREFIX=%{_prefix}
+	
+%find_lang %{name} --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc ChangeLog doc/README
 %attr(755,root,root) %{_bindir}/*
