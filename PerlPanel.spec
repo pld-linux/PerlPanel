@@ -1,3 +1,4 @@
+%include        /usr/lib/rpm/macros.perl
 Summary:	Panel program written in Perl
 Summary(pl):	Panel napisany w Perlu
 Name:		PerlPanel
@@ -9,10 +10,8 @@ Source0:	http://jodrell.net/files/%{name}-%{version}.tar.gz
 # Source0-md5:	2b0724b09c0f332a24c509adad3ae791
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://jodrell.net/projects/perlpanel/
-BuildRequires:	perl-tools-pod
-Requires:	perl-Gnome2-Wnck
-Requires:	perl-Gtk2
-Requires:	perl-XML-Simple
+BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:  rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
