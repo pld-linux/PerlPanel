@@ -32,7 +32,6 @@ PerlPanel jest prób± stworzenia ³atwego w u¿yciu, lekkiego panela
 %{__make} \
 	PREFIX=%{_prefix} \
 	
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
