@@ -1,7 +1,6 @@
-diff -aurN PerlPanel-0.1.0.orig/Makefile PerlPanel-0.1.0/Makefile
---- PerlPanel-0.1.0.orig/Makefile	2003-10-12 18:22:17.000000000 +0200
-+++ PerlPanel-0.1.0/Makefile	2003-10-23 21:24:28.026089968 +0200
-@@ -17,7 +17,7 @@
+--- PerlPanel-0.2.0.orig/Makefile	2004-01-06 17:13:13.000000000 +0100
++++ PerlPanel-0.2.0/Makefile	2004-01-06 22:22:08.000000000 +0100
+@@ -16,7 +16,7 @@
  #
  # $Id$
  
@@ -9,33 +8,33 @@ diff -aurN PerlPanel-0.1.0.orig/Makefile PerlPanel-0.1.0/Makefile
 +PREFIX=/usr
  LIBDIR=$(PREFIX)/lib/perlpanel
  BINDIR=$(PREFIX)/bin
- MANDIR=$(PREFIX)/share/man/man1
-@@ -32,17 +32,17 @@
+ DATADIR=$(PREFIX)/share
+@@ -34,17 +34,17 @@
  	pod2man doc/perlpanel-applet-howto.pod > build/perlpanel-applet-howto.1
  
  install:
--	mkdir -p $(LIBDIR) $(BINDIR) $(MANDIR) $(IMGDIR)
+-	mkdir -p $(LIBDIR) $(BINDIR) $(MANDIR)/$(MAN_SECTION) $(IMGDIR)
 -	install -m 0755 build/perlpanel $(BINDIR)/
 -	install -m 0755 src/perlpaneld $(BINDIR)/
 -	install -m 0755 src/perlpanel-item-edit $(BINDIR)/
 -	cp -Rvp lib/* $(LIBDIR)/
--	install -m 0755 build/perlpanel.1 $(MANDIR)/
--	install -m 0755 build/perlpanel-applet-howto.1 $(MANDIR)/
--	install -m 0644 share/perlpanel.png $(IMGDIR)/
--	install -m 0644 share/perlpanel-menu-icon.png $(IMGDIR)/
--	install -m 0644 share/perlpanel-lock-screen.png $(IMGDIR)/
--	install -m 0644 share/perlpanel-show-desktop.png $(IMGDIR)/
-+	mkdir -p $(DESTDIR)$(LIBDIR) $(DESTDIR)$(BINDIR) $(DESTDIR)$(MANDIR) $(DESTDIR)$(IMGDIR)
+-	install -m 0755 build/perlpanel.1 $(MANDIR)/$(MAN_SECTION)/
+-	install -m 0755 build/perlpanel-applet-howto.1 $(MANDIR)/$(MAN_SECTION)/
+-	install -m 0644 share/pixmaps/perlpanel.png $(IMGDIR)/
+-	install -m 0644 share/pixmaps/perlpanel-menu-icon.png $(IMGDIR)/
+-	install -m 0644 share/pixmaps/perlpanel-lock-screen.png $(IMGDIR)/
+-	install -m 0644 share/pixmaps/perlpanel-show-desktop.png $(IMGDIR)/
++	mkdir -p $(DESTDIR)$(LIBDIR) $(DESTDIR)$(BINDIR) $(DESTDIR)$(MANDIR)/$(MAN_SECTION) $(DESTDIR)$(IMGDIR)
 +	install -m 0755 build/perlpanel $(DESTDIR)$(BINDIR)/
 +	install -m 0755 src/perlpaneld $(DESTDIR)$(BINDIR)/
 +	install -m 0755 src/perlpanel-item-edit $(DESTDIR)$(BINDIR)/
 +	cp -Rvp lib/* $(DESTDIR)$(LIBDIR)/
-+	install -m 0755 build/perlpanel.1 $(DESTDIR)$(MANDIR)/
-+	install -m 0755 build/perlpanel-applet-howto.1 $(DESTDIR)$(MANDIR)/
-+	install -m 0644 share/perlpanel.png $(DESTDIR)$(IMGDIR)/
-+	install -m 0644 share/perlpanel-menu-icon.png $(DESTDIR)$(IMGDIR)/
-+	install -m 0644 share/perlpanel-lock-screen.png $(DESTDIR)$(IMGDIR)/
-+	install -m 0644 share/perlpanel-show-desktop.png $(DESTDIR)$(IMGDIR)/
++	install -m 0755 build/perlpanel.1 $(DESTDIR)$(MANDIR)/$(MAN_SECTION)/
++	install -m 0755 build/perlpanel-applet-howto.1 $(DESTDIR)$(MANDIR)/$(MAN_SECTION)/
++	install -m 0644 share/pixmaps/perlpanel.png $(DESTDIR)$(IMGDIR)/
++	install -m 0644 share/pixmaps/perlpanel-menu-icon.png $(DESTDIR)$(IMGDIR)/
++	install -m 0644 share/pixmaps/perlpanel-lock-screen.png $(DESTDIR)$(IMGDIR)/
++	install -m 0644 share/pixmaps/perlpanel-show-desktop.png $(DESTDIR)$(IMGDIR)/
  
  clean:
  	rm -rf build

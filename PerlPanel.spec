@@ -2,12 +2,12 @@
 Summary:	Panel program written in Perl
 Summary(pl):	Panel napisany w Perlu
 Name:		PerlPanel
-Version:	0.1.0
-Release:	0.2
+Version:	0.2.0
+Release:	0.1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://jodrell.net/files/%{name}-%{version}.tar.gz
-# Source0-md5:	2b0724b09c0f332a24c509adad3ae791
+# Source0-md5:	af8c660120c68cb497e4db832ad60bc7
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://jodrell.net/projects/perlpanel/
 BuildRequires:	perl-devel >= 1:5.8.0
