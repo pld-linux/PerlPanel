@@ -1,19 +1,16 @@
-#
-# TODO:
-# - check Rs
-#
 Summary:	Panel program written in Perl
 Summary(pl):	Panel napisany w Perlu
 Name:		PerlPanel
-Version:	0.0.5
+Version:	0.1.0
 Release:	0.1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://jodrell.net/files/%{name}-%{version}.tar.gz
-# Source0-md5:	322a3eafe09e590c796280f1084f7134
+# Source0-md5:	2b0724b09c0f332a24c509adad3ae791
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://jodrell.net/projects/perlpanel/
 BuildRequires:	perl-tools-pod
+Requires:	perl-Gnome2-Wnck
 Requires:	perl-Gtk2
 Requires:	perl-XML-Simple
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
