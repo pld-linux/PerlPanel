@@ -1,0 +1,12 @@
+diff -aurN PerlPanel-0.4.1.orig/Makefile PerlPanel-0.4.1/Makefile
+--- PerlPanel-0.4.1.orig/Makefile	2004-04-06 00:02:29.000000000 +0200
++++ PerlPanel-0.4.1/Makefile	2004-04-22 23:48:29.188722176 +0200
+@@ -76,7 +76,7 @@
+ 	install -m 0755 build/PerlPanel::MenuBase.1	$(DESTDIR)/$(MANDIR)/$(MAN_LIBS_SECTION)/
+ 
+ 	# similarly for other locales as they become available:
+-	install -m 0644 build/locale/en/$(LC_CATEGORY)/perlpanel.mo $(LOCALEDIR)/en/$(LC_CATEGORY)/
++	install -m 0644 build/locale/en/$(LC_CATEGORY)/perlpanel.mo $(DESTDIR)/$(LOCALEDIR)/en/$(LC_CATEGORY)/
+ clean:
+ 	rm -rf build
+ 
