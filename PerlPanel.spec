@@ -10,7 +10,7 @@ Source0:	http://jodrell.net/files/%{name}-%{version}.tar.gz
 # Source0-md5:	2b0724b09c0f332a24c509adad3ae791
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://jodrell.net/projects/perlpanel/
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:  rpm-perlprov >= 4.1-13
 Requires:	perl-XML-Parser
 Requires:	perl-XML-Simple
