@@ -24,7 +24,7 @@ Gnome's gnome-panel and KDE's Kicker) in Perl, using Gtk2.
 
 %description -l pl
 PerlPanel jest prób± stworzenia ³atwego w u¿yciu, lekkiego panela
-(podobnego do panela GNOME i Kickera z KDE) w Perlu, przy uzyciu Gtk2.
+(podobnego do panela GNOME i Kickera z KDE) w Perlu, przy u¿yciu Gtk2.
 
 %prep
 %setup -q
@@ -47,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog doc/README
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/perlpanel
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
 %{_mandir}/man1/*
