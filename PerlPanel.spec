@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 PerlPanel is an attempt to build a useable, lean panel program (like
-Gnome's gnome-panel and KDE's Kicker) in Perl, using Gtk2.
+GNOME's gnome-panel and KDE's Kicker) in Perl, using Gtk2.
 
 %description -l pl
 PerlPanel jest prób± stworzenia ³atwego w u¿yciu, lekkiego panela
