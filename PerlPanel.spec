@@ -1,5 +1,6 @@
 #
-# TODO: split themes into subpkgs
+# TODO: split themes into subpkgs (low priority)
+# 	write perl-Gtk2-TrayManager.spec (high priority)
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Panel program written in Perl
@@ -33,7 +34,6 @@ PerlPanel jest prób± stworzenia ³atwego w u¿yciu, lekkiego panela
 %prep
 %setup -q
 %patch0 -p1
-%{__perl} -pi -e 's/TrayManager/TrayIcon/g' lib/PerlPanel/Applet/NotificationArea.pm
 
 %build
 %{__make} \
