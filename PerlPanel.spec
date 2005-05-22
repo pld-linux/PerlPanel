@@ -10,7 +10,7 @@ Version:	0.8.0
 Release:	0.1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://jodrell.net/files/perlpanel/%{name}-%{version}.tar.gz
+Source0:	http://jodrell.net/files/perlpanel/dist/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	b70fd6840305ea9aac33f478e42a72b2
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://jodrell.net/projects/perlpanel/
