@@ -1,20 +1,22 @@
 #
-# TODO: split themes into subpkgs (low priority)
-# 	write perl-Gtk2-TrayManager.spec (high priority)
-#
+# TODO:
+# - spec! new R: perl(X11::FreeDesktop::DesktopEntry) 
+# - split themes into subpkgs (low priority)
+# 
 %include	/usr/lib/rpm/macros.perl
 Summary:	Panel program written in Perl
 Summary(pl):	Panel napisany w Perlu
 Name:		PerlPanel
-Version:	0.8.0
+Version:	0.9.1
 Release:	0.1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://jodrell.net/files/perlpanel/dist/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	b70fd6840305ea9aac33f478e42a72b2
-Patch0:		%{name}-DESTDIR.patch
+# Source0-md5:	4ed35b89add1cb3c67f1d2cab6780ef7
 URL:		http://jodrell.net/projects/perlpanel/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-Locale-gettext
+BuildRequires:	perl-XML-Simple
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	hicolor-icon-theme
 Requires:	perl-Glib >= 1.031
@@ -33,7 +35,6 @@ PerlPanel jest prób± stworzenia ³atwego w u¿yciu, lekkiego panela
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__make} \
@@ -44,8 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	PREFIX=%{_prefix} \
-	CONFDIR=%{_sysconfdir}
+	PREFIX=%{_prefix}
 	
 %find_lang %{name} --all-name
 
@@ -56,7 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog doc/README
 %attr(755,root,root) %{_bindir}/*
-%config %{_sysconfdir}/*
 %{_libdir}/perlpanel
 %{_datadir}/perlpanel
 %{_iconsdir}/Bluecurve/48x48/apps/*
