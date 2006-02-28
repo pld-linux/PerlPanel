@@ -1,8 +1,8 @@
 #
 # TODO:
-# - spec! new R: perl(X11::FreeDesktop::DesktopEntry) 
+# - spec! new R: perl(X11::FreeDesktop::DesktopEntry)
 # - split themes into subpkgs (low priority)
-# 
+#
 %include	/usr/lib/rpm/macros.perl
 Summary:	Panel program written in Perl
 Summary(pl):	Panel napisany w Perlu
@@ -14,9 +14,9 @@ Group:		X11/Applications
 Source0:	http://jodrell.net/files/perlpanel/dist/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	4ed35b89add1cb3c67f1d2cab6780ef7
 URL:		http://jodrell.net/projects/perlpanel/
-BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Locale-gettext
 BuildRequires:	perl-XML-Simple
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	hicolor-icon-theme
 Requires:	perl-Glib >= 1.031
@@ -39,14 +39,14 @@ PerlPanel jest prób± stworzenia ³atwego w u¿yciu, lekkiego panela
 %build
 %{__make} \
 	PREFIX=%{_prefix}
-	
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	PREFIX=%{_prefix}
-	
+
 %find_lang %{name} --all-name
 
 %clean
