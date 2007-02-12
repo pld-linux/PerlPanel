@@ -5,7 +5,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Panel program written in Perl
-Summary(pl):	Panel napisany w Perlu
+Summary(pl.UTF-8):   Panel napisany w Perlu
 Name:		PerlPanel
 Version:	0.9.1
 Release:	0.1
@@ -29,9 +29,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 PerlPanel is an attempt to build a useable, lean panel program (like
 GNOME's gnome-panel and KDE's Kicker) in Perl, using Gtk2.
 
-%description -l pl
-PerlPanel jest prÛb± stworzenia ≥atwego w uøyciu, lekkiego panela
-(podobnego do panela GNOME i Kickera z KDE) w Perlu, przy uøyciu Gtk2.
+%description -l pl.UTF-8
+PerlPanel jest pr√≥bƒÖ stworzenia ≈Çatwego w u≈ºyciu, lekkiego panela
+(podobnego do panela GNOME i Kickera z KDE) w Perlu, przy u≈ºyciu Gtk2.
 
 %prep
 %setup -q
