@@ -5,7 +5,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Panel program written in Perl
-Summary(pl.UTF-8):   Panel napisany w Perlu
+Summary(pl.UTF-8):	Panel napisany w Perlu
 Name:		PerlPanel
 Version:	0.9.1
 Release:	0.1
