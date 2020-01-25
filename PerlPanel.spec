@@ -3,7 +3,6 @@
 # - spec! new R: perl(X11::FreeDesktop::DesktopEntry)
 # - split themes into subpkgs (low priority)
 #
-%include	/usr/lib/rpm/macros.perl
 Summary:	Panel program written in Perl
 Summary(pl.UTF-8):	Panel napisany w Perlu
 Name:		PerlPanel
